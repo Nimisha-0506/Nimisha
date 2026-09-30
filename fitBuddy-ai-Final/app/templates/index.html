@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>FitBuddy</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <h1>FitBuddy</h1>
+  <div style="
+    margin:0;
+    padding:0;
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-family:Arial, Helvetica, sans-serif;
+    background-image:url('/static/images/gym-bg.jpg');
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+">
+  <form action="/generate" method="post">
+    <input type="text" name="name" placeholder="Name" required>
+    <input type="number" name="age" placeholder="Age" required>
+    <input type="number" name="height" placeholder="Height (cm)" required>
+    <input type="number" name="weight" placeholder="Weight (kg)" required>
+    <select name="goal">
+      <option>Weight loss</option>
+      <option>Muscle gain</option>
+      <option>Stay fit</option>
+    </select>
+    <select name="intensity">
+      <option>Low</option>
+     <option>Medium</option>
+     <option>High</option>
+    </select>
+    <button type="submit">Get my plan</button>
+  </form>
+  </div>
+</body>
+</html>

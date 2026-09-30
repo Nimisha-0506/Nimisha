@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Your FitBuddy Plan</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <div class="card wide">
+    <h1>Your Plan</h1>
+    <div style="white-space:pre-wrap;font-size:18px;">{{ plan }}</div>
+
+    <h2>Nutrition Tips</h2>
+    <ul>
+      <li>Drink 2 to 3 litres of water daily.</li>
+      <li>Eat protein at every meal (eggs, dal, paneer, chicken, curd).</li>
+      <li>Fill half your plate with vegetables.</li>
+      <li>Choose whole grains like oats, brown rice and millets.</li>
+      <li>Avoid sugary drinks and deep-fried snacks.</li>
+      <li>Eat a balanced meal 1 to 2 hours before workouts.</li>
+      <li>Sleep 7 to 8 hours, since poor sleep increases cravings.</li>
+    </ul>
+    <p style="font-size:13px;opacity:.7">General guidance only. Consult a doctor or dietitian for medical conditions.</p>
+    <h2>Feedback</h2>
+<form action="/feedback" method="post">
+  <input type="hidden" name="name" value="{{ name }}">
+  <label>Rating</label>
+  <select name="rating">
+    <option value="5">5 - Excellent</option>
+    <option value="4">4 - Good</option>
+    <option value="3">3 - Okay</option>
+    <option value="2">2 - Poor</option>
+    <option value="1">1 - Bad</option>
+  </select>
+  <label>Comments</label>
+  <textarea name="comment" rows="3" placeholder="How was your plan?"></textarea>
+  <button type="submit">Send feedback</button>
+</form>
+    <a class="btn" href="/">Back</a>
+  </div>
+</body>
+</html>
